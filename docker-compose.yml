@@ -1,0 +1,13 @@
+version: "3"
+services:
+  db_postgres:
+    image: "postgres"
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: "MyUser"
+      POSTGRES_PASSWORD: "abc123"
+      POSTGRES_DB: "testPos"
+    volumes: 
+      - E:db_data:/var/lib/postgresql/data
+  
